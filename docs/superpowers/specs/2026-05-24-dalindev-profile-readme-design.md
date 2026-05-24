@@ -51,11 +51,14 @@ Four bullets (trimmed from six). Kept the strongest: differentiated work, headli
 Four lines inside a fenced code block. Only the primary stack — the things actually shipping today. Anyone curious about exploratory or older tech can see the heat-map on `dalin.dev`.
 
 ```
-AI         LoRA · Gemini API · Claude API · OpenAI API · Embeddings
+AI         Agentic · Context Eng · Prompt Eng · Agent Tools · AI Workflows · Evals
+           LoRA · Gemini API · Claude API · OpenAI API · Embeddings
 Frontend   React · Next.js · TypeScript · TanStack Query
 Backend    Node.js · Python
 Data       PostgreSQL · Supabase · GCP
 ```
+
+The AI row spans two lines on purpose. Top line = practices (what differentiates the work). Bottom line = the implementation stack (APIs and models — increasingly commoditized). Leading with practices signals depth, not just tool familiarity.
 
 ### 4. Open Mission Control (footer)
 
@@ -81,4 +84,5 @@ Data       PostgreSQL · Supabase · GCP
 ## Iteration history
 
 - **v1 (initial):** 5 sections including GitHub Stats and 6-category heat-coded skill matrix. Felt overstuffed on a bio.
-- **v2 (this spec):** Dropped Stats, top-langs, heat tiers, metric chips, visit counter, and easter-egg breadcrumb. 4 sections, ~30 lines.
+- **v2:** Dropped Stats, top-langs, heat tiers, metric chips, visit counter, and easter-egg breadcrumb. 4 sections, ~30 lines.
+- **v3 (this spec):** Split AI row into two — practices (Agentic, Context Eng, Prompt Eng, Agent Tools, AI Workflows, Evals) on top, APIs/models below. Practices are the differentiator on a bio; APIs are commodity.

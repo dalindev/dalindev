@@ -18,7 +18,8 @@ $ dalin@parker-ai > booting mission-control...
 ## ⚡ Core Stack
 
 ```
-AI         LoRA · Gemini API · Claude API · OpenAI API · Embeddings
+AI         Agentic · Context Eng · Prompt Eng · Agent Tools · AI Workflows · Evals
+           LoRA · Gemini API · Claude API · OpenAI API · Embeddings
 Frontend   React · Next.js · TypeScript · TanStack Query
 Backend    Node.js · Python
 Data       PostgreSQL · Supabase · GCP
