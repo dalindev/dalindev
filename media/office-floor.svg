@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 260" width="800" height="260" role="img" aria-label="Office Floor — crew of 8 AI agents">
+
+  <!-- Window background -->
+  <rect width="800" height="260" rx="10" fill="#0d1117" stroke="#30363d"/>
+
+  <!-- Title bar -->
+  <path d="M 0,10 A 10,10 0 0 1 10,0 L 790,0 A 10,10 0 0 1 800,10 L 800,36 L 0,36 Z" fill="#161b22"/>
+  <line x1="0" y1="36" x2="800" y2="36" stroke="#30363d"/>
+
+  <!-- Traffic lights -->
+  <circle cx="22" cy="18" r="6" fill="#ff5f57"/>
+  <circle cx="42" cy="18" r="6" fill="#febc2e"/>
+  <circle cx="62" cy="18" r="6" fill="#28c840"/>
+
+  <!-- Title -->
+  <text x="400" y="22" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace" font-size="11" fill="#6e7681" letter-spacing="1">office-floor — crew of 8 · 5 busy · 2 idle · 1 offline</text>
+
+  <!-- Agent grid -->
+  <g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace">
+
+    <!-- ── Row 1 ── -->
+
+    <!-- Card 1: MAIN AGENT (Claude 4.7 Opus, busy, amber) -->
+    <g transform="translate(10, 46)">
+      <rect width="186" height="96" rx="6" fill="#161b22" stroke="#30363d"/>
+      <circle cx="20" cy="20" r="4" fill="#f59e0b">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+      </circle>
+      <text x="32" y="24" fill="#f59e0b" font-size="11" font-weight="700" letter-spacing="0.6">MAIN AGENT</text>
+      <text x="12" y="44" fill="#6e7681" font-size="10">Claude 4.7 Opus</text>
+      <text x="12" y="68" fill="#c9d1d9" font-size="11">Orchestrating</text>
+      <text x="12" y="84" fill="#8b949e" font-size="11">24 subtasks</text>
+    </g>
+
+    <!-- Card 2: FINE-TUNE AGENT (Claude 4.7 Opus, busy, amber) -->
+    <g transform="translate(208, 46)">
+      <rect width="186" height="96" rx="6" fill="#161b22" stroke="#30363d"/>
+      <circle cx="20" cy="20" r="4" fill="#f59e0b">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite" begin="0.3s"/>
+      </circle>
+      <text x="32" y="24" fill="#f59e0b" font-size="11" font-weight="700" letter-spacing="0.6">FINE-TUNE AGENT</text>
+      <text x="12" y="44" fill="#6e7681" font-size="10">Claude 4.7 Opus</text>
+      <text x="12" y="68" fill="#c9d1d9" font-size="11">LoRA v17 · epoch 12</text>
+      <text x="12" y="84" fill="#8b949e" font-size="11">step 1240/2000 · 62%</text>
+    </g>
+
+    <!-- Card 3: CLASSIFIER AGENT (Gemini 3.1 Pro, busy, blue) -->
+    <g transform="translate(406, 46)">
+      <rect width="186" height="96" rx="6" fill="#161b22" stroke="#30363d"/>
+      <circle cx="20" cy="20" r="4" fill="#60a5fa">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite" begin="0.6s"/>
+      </circle>
+      <text x="32" y="24" fill="#60a5fa" font-size="11" font-weight="700" letter-spacing="0.6">CLASSIFIER AGENT</text>
+      <text x="12" y="44" fill="#6e7681" font-size="10">Gemini 3.1 Pro</text>
+      <text x="12" y="68" fill="#c9d1d9" font-size="11">Classify 482 ads</text>
+      <text x="12" y="84" fill="#8b949e" font-size="11">96.4% accuracy</text>
+    </g>
+
+    <!-- Card 4: ANALYZE AGENT (Gemini 3.0 Flash, busy, blue) -->
+    <g transform="translate(604, 46)">
+      <rect width="186" height="96" rx="6" fill="#161b22" stroke="#30363d"/>
+      <circle cx="20" cy="20" r="4" fill="#60a5fa">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite" begin="0.9s"/>
+      </circle>
+      <text x="32" y="24" fill="#60a5fa" font-size="11" font-weight="700" letter-spacing="0.6">ANALYZE AGENT</text>
+      <text x="12" y="44" fill="#6e7681" font-size="10">Gemini 3.0 Flash</text>
+      <text x="12" y="68" fill="#c9d1d9" font-size="11">Analyze 8.4K images</text>
+      <text x="12" y="84" fill="#8b949e" font-size="11">12ms p50 · CLIP-L</text>
+    </g>
+
+    <!-- ── Row 2 ── -->
+
+    <!-- Card 5: WEB SEARCH AGENT (Gemini 3.1 Pro, busy, blue) -->
+    <g transform="translate(10, 154)">
+      <rect width="186" height="96" rx="6" fill="#161b22" stroke="#30363d"/>
+      <circle cx="20" cy="20" r="4" fill="#60a5fa">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite" begin="1.2s"/>
+      </circle>
+      <text x="32" y="24" fill="#60a5fa" font-size="11" font-weight="700" letter-spacing="0.6">WEB SEARCH AGENT</text>
+      <text x="12" y="44" fill="#6e7681" font-size="10">Gemini 3.1 Pro</text>
+      <text x="12" y="68" fill="#c9d1d9" font-size="11">Live grounding</text>
+      <text x="12" y="84" fill="#8b949e" font-size="11">87 sources · top-50</text>
+    </g>
+
+    <!-- Card 6: FAILOVER AGENT (GPT 5.5, idle, gray) -->
+    <g transform="translate(208, 154)">
+      <rect width="186" height="96" rx="6" fill="#161b22" stroke="#30363d"/>
+      <circle cx="20" cy="20" r="4" fill="none" stroke="#6e7681" stroke-width="1.5"/>
+      <text x="32" y="24" fill="#6e7681" font-size="11" font-weight="700" letter-spacing="0.6">FAILOVER AGENT</text>
+      <text x="12" y="44" fill="#6e7681" font-size="10">GPT 5.5</text>
+      <text x="12" y="68" fill="#8b949e" font-size="11">On standby</text>
+      <text x="12" y="84" fill="#4b5563" font-size="11" font-style="italic">doomscrolling</text>
+    </g>
+
+    <!-- Card 7: TRANSCRIBE AGENT (Whisper v4, idle, gray) -->
+    <g transform="translate(406, 154)">
+      <rect width="186" height="96" rx="6" fill="#161b22" stroke="#30363d"/>
+      <circle cx="20" cy="20" r="4" fill="none" stroke="#6e7681" stroke-width="1.5"/>
+      <text x="32" y="24" fill="#6e7681" font-size="11" font-weight="700" letter-spacing="0.6">TRANSCRIBE AGENT</text>
+      <text x="12" y="44" fill="#6e7681" font-size="10">Whisper v4</text>
+      <text x="12" y="68" fill="#8b949e" font-size="11">No audio queued</text>
+      <text x="12" y="84" fill="#4b5563" font-size="11" font-style="italic">napping</text>
+    </g>
+
+    <!-- Card 8: OVERTHINK AGENT (DeepSeek v4, offline, red) -->
+    <g transform="translate(604, 154)">
+      <rect width="186" height="96" rx="6" fill="#161b22" stroke="#30363d" opacity="0.6"/>
+      <circle cx="20" cy="20" r="4" fill="#ef4444"/>
+      <text x="32" y="24" fill="#ef4444" font-size="11" font-weight="700" letter-spacing="0.6">OVERTHINK AGENT</text>
+      <text x="12" y="44" fill="#6e7681" font-size="10">DeepSeek v4</text>
+      <text x="12" y="68" fill="#ef4444" font-size="11">OOM · reasoning</text>
+      <text x="12" y="84" fill="#8b949e" font-size="11">chain too long</text>
+    </g>
+
+  </g>
+</svg>

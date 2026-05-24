@@ -12,6 +12,10 @@ Building AI agent platforms at **Parker AI**. Async pipelines that process billi
   <img src="./media/term-finetune.svg" alt="finetune.v17 — qwen-3.6-27b — LoRA training monitor" width="800">
 </p>
 
+<p align="center">
+  <img src="./media/office-floor.svg" alt="office-floor — crew of 8 AI agents" width="800">
+</p>
+
 ---
 
 **→ [dalin.dev](https://dalin.dev)** · Three.js System Map · live terminals · built with Claude Opus 4.7

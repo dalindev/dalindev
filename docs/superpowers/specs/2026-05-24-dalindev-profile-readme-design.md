@@ -55,7 +55,19 @@ Log content (rotating sample):
 [18:54:32] agent.classify   · 421 ads · 96.7% acc
 ```
 
-### 3. `media/term-finetune.svg` — LoRA training monitor
+### 3. `media/office-floor.svg` — agent crew dashboard
+
+- 800 × 260, terminal chrome titled `office-floor — crew of 8 · 5 busy · 2 idle · 1 offline`
+- 4×2 grid of 186×96 agent cards, each with:
+  - Status dot (filled colored + blink for busy, hollow gray for idle, filled red for offline)
+  - Role name in agent color
+  - Model name (dim)
+  - 2-line task description (light gray + dim second line; italic for idle agents)
+- Color map: Claude Opus → `#f59e0b` amber; Gemini → `#60a5fa` blue; GPT (idle) → `#6e7681` gray ring; Whisper (idle) → gray ring; DeepSeek (offline) → `#ef4444` red
+- Busy agents' dots blink in staggered cycles (begin offsets 0s / 0.3s / 0.6s / 0.9s / 1.2s) so they don't pulse in unison
+- Agent data sourced from `OFFICE_AGENTS` const in `dalin.dev/index.html` line ~1947
+
+### 4. `media/term-finetune.svg` — LoRA training monitor
 
 - 800 × 240, Mac terminal chrome
 - Title: `finetune.v17 — qwen-3.6-27b · A100`
@@ -66,7 +78,7 @@ Log content (rotating sample):
 - GPU bar fluctuates `73–78` over 6 s, CPU bar `34–42` over 4.5 s (gives "alive" feel without random jitter)
 - Static rows: loss / val / lr · VRAM · temp · RAM · recent 3 log lines
 
-### 4. Footer (markdown)
+### 5. Footer (markdown)
 
 ```markdown
 ---
@@ -96,4 +108,5 @@ Log content (rotating sample):
 - **v2:** Dropped Stats, top-langs, heat tiers, metric chips, visit counter, easter-egg breadcrumb. 4 sections, ~30 lines.
 - **v3:** Split AI row into practices (Agentic, Context Eng, Prompt Eng, Agent Tools, AI Workflows, Evals) + implementation stack.
 - **v4:** Replaced text Active Agent + Core Stack with single animated terminal-banner SVG (`whoami / cat role.md / stack --core / open dalin.dev`).
-- **v5 (this spec):** Replaced the typewriter banner with the dalin.dev hero text + two animated console SVGs (streaming log + LoRA training monitor) to match how dalin.dev presents the work.
+- **v5:** Replaced the typewriter banner with the dalin.dev hero text + two animated console SVGs (streaming log + LoRA training monitor) to match how dalin.dev presents the work.
+- **v6 (this spec):** Added the OFFICE FLOOR panel — 4×2 grid of agent cards showing the Parker AI crew (Main, Fine-tune, Classifier, Analyze, Web Search, Failover, Transcribe, Overthink). Also rewrote term-stream.svg and term-finetune.svg using inline `fill` attributes instead of a `<style>` block, because GitHub's image proxy doesn't reliably apply CSS classes when SVGs are loaded via `<img>` — text without an explicit `fill` was falling back to SVG's default black, invisible on the dark terminal background.
