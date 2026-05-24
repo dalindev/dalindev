@@ -1,31 +1,18 @@
-```
-$ dalin@parker-ai > booting mission-control...
-[✓] identity ........... Senior Full Stack / AI Developer
-[✓] location ........... Ottawa, Canada
-[✓] tenure ............. 11 years shipping production systems
-[✓] mission ............ → dalin.dev
-```
+# Dalin Huang
 
-## 🛰️ Active Agent
+### Senior Full Stack Developer / AI Developer
 
-**`PARKER-AI`** · Senior FS / AI Developer · Dec 2023 → Present · `status: live`
+Building AI agent platforms at **Parker AI**. Async pipelines that process billions of data points a day. Fine-tunes open-weight LLMs with LoRA. Eleven years shipping production systems — backend, frontend, and the weird stuff in between.
 
-- Architected AI agent platform for marketing/creative strategy
-- LoRA fine-tunes + auto-research loop — F1 **0.7% → 79%** across 30+ iterations
-- Pipelines: billions of data points/day · millions of ads · TBs of media
-- Async ad classification on Gemini Batch API + Supabase Postgres at scale
+<p align="center">
+  <img src="./media/term-stream.svg" alt="dalin@parker-ai — system.live" width="800">
+</p>
 
-## ⚡ Core Stack
+<p align="center">
+  <img src="./media/term-finetune.svg" alt="finetune.v17 — qwen-3.6-27b — LoRA training monitor" width="800">
+</p>
 
-```
-AI         Agentic · Context Eng · Prompt Eng · Agent Tools · AI Workflows · Evals
-           LoRA · Gemini API · Claude API · OpenAI API · Embeddings
-Frontend   React · Next.js · TypeScript · TanStack Query
-Backend    Node.js · Python
-Data       PostgreSQL · Supabase · GCP
-```
-
-## 🌐 Open Mission Control
+---
 
 **→ [dalin.dev](https://dalin.dev)** · Three.js System Map · live terminals · built with Claude Opus 4.7
 

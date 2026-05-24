@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 180" width="800" height="180" role="img" aria-label="dalin@parker-ai system.live streaming terminal">
+  <style>
+    .term { font-family: 'SF Mono', SFMono-Regular, ui-monospace, Menlo, Monaco, Consolas, 'Liberation Mono', 'DejaVu Sans Mono', monospace; font-size: 12px; font-feature-settings: "liga" 0, "calt" 0; fill: #c9d1d9; }
+    .ts    { fill: #4b5563; }
+    .key   { fill: #c9d1d9; }
+    .acc   { fill: #fbbf24; }
+    .ok    { fill: #4ade80; }
+    .warn  { fill: #f59e0b; }
+    .dim   { fill: #6e7681; }
+    .title { fill: #6e7681; font-size: 11px; letter-spacing: 1px; }
+    .live  { fill: #4ade80; font-size: 11px; letter-spacing: 1px; }
+  </style>
+
+  <defs>
+    <clipPath id="streamWindow">
+      <rect x="0" y="46" width="800" height="128"/>
+    </clipPath>
+  </defs>
+
+  <!-- Window background -->
+  <rect width="800" height="180" rx="10" fill="#0d1117" stroke="#30363d"/>
+
+  <!-- Title bar -->
+  <path d="M 0,10 A 10,10 0 0 1 10,0 L 790,0 A 10,10 0 0 1 800,10 L 800,36 L 0,36 Z" fill="#161b22"/>
+  <line x1="0" y1="36" x2="800" y2="36" stroke="#30363d"/>
+
+  <!-- Traffic lights -->
+  <circle cx="22" cy="18" r="6" fill="#ff5f57"/>
+  <circle cx="42" cy="18" r="6" fill="#febc2e"/>
+  <circle cx="62" cy="18" r="6" fill="#28c840"/>
+
+  <!-- Title -->
+  <text x="400" y="22" text-anchor="middle" class="term title">dalin@parker-ai — system.live</text>
+
+  <!-- STREAMING indicator (top right) -->
+  <g transform="translate(700, 22)">
+    <circle cx="-12" cy="-4" r="4" fill="#4ade80">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="0" class="term live">STREAMING</text>
+  </g>
+
+  <!-- Streaming log lines (scrolling discrete) -->
+  <g clip-path="url(#streamWindow)" class="term">
+    <g transform="translate(0,0)">
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; 0,-18; 0,-36; 0,-54; 0,-72; 0,-90"
+        keyTimes="0; 0.167; 0.333; 0.5; 0.667; 0.833"
+        calcMode="discrete"
+        dur="9s" repeatCount="indefinite"/>
+
+      <text x="24" y="60"><tspan class="ts">[18:54:21]</tspan> <tspan class="key">agent.classify</tspan>  · 482 ads · <tspan class="ok">96.4%</tspan> acc</text>
+      <text x="24" y="78"><tspan class="ts">[18:54:22]</tspan> <tspan class="key">supabase.read</tspan>   <tspan class="ok">ok</tspan> · replica-2 · 14ms</text>
+      <text x="24" y="96"><tspan class="ts">[18:54:23]</tspan> <tspan class="key">agent.parker</tspan>    · batch 482 · 12.4M embeddings</text>
+      <text x="24" y="114"><tspan class="ts">[18:54:24]</tspan> <tspan class="key">finetune.v17</tspan>    <tspan class="acc">LoRA</tspan> · step 1240/2000</text>
+      <text x="24" y="132"><tspan class="ts">[18:54:25]</tspan> <tspan class="key">scraper.adset</tspan>   <tspan class="ok">ok</tspan> · 87 sources synced</text>
+      <text x="24" y="150"><tspan class="ts">[18:54:26]</tspan> <tspan class="key">dashboard.ttq</tspan>   · 38ms p50 · 124ms p95</text>
+      <text x="24" y="168"><tspan class="ts">[18:54:27]</tspan> <tspan class="warn">[!] rate-limit</tspan> · backoff 2s · retry · <tspan class="ok">ok</tspan></text>
+      <text x="24" y="186"><tspan class="ts">[18:54:28]</tspan> <tspan class="key">f1.score</tspan>        = <tspan class="ok">0.794</tspan> ↑</text>
+      <text x="24" y="204"><tspan class="ts">[18:54:29]</tspan> <tspan class="key">gemini.batch</tspan>    · 12 jobs queued</text>
+      <text x="24" y="222"><tspan class="ts">[18:54:30]</tspan> <tspan class="key">embeddings.write</tspan> <tspan class="ok">ok</tspan> · 3.2K vectors</text>
+      <text x="24" y="240"><tspan class="ts">[18:54:31]</tspan> <tspan class="key">dashboard.kpi</tspan>   · uptime <tspan class="ok">99.9%</tspan> · p95 124ms</text>
+      <text x="24" y="258"><tspan class="ts">[18:54:32]</tspan> <tspan class="key">agent.classify</tspan>  · 421 ads · <tspan class="ok">96.7%</tspan> acc</text>
+    </g>
+  </g>
+</svg>

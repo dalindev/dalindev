@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>dalindev — README preview</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --bg-panel: #010409;
+    --fg: #e6edf3;
+    --fg-muted: #9198a1;
+    --link: #4493f8;
+    --border: #30363d;
+  }
+  body {
+    background: var(--bg-panel);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+  }
+  .frame {
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 32px 40px;
+  }
+  .label {
+    color: var(--fg-muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 16px 0;
+  }
+  h1 { font-size: 32px; margin: 0 0 4px 0; }
+  h3 { color: #58a6ff; font-weight: 600; margin: 0 0 16px 0; }
+  h2 {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+    margin-top: 28px;
+  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .center img, .center object { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .center { text-align: center; margin: 16px 0; }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 24px 0; }
+  .toggle {
+    position: fixed; top: 12px; right: 16px;
+    background: #21262d; color: var(--fg);
+    border: 1px solid var(--border);
+    padding: 6px 12px; border-radius: 6px;
+    cursor: pointer; font-family: inherit; font-size: 12px;
+  }
+  body.light { background: #ffffff; color: #1f2328; }
+  body.light .frame { background: #ffffff; border-color: #d1d9e0; }
+  body.light h2 { border-color: #d1d9e0; }
+  body.light h3 { color: #0969da; }
+  body.light a { color: #0969da; }
+</style>
+</head>
+<body>
+  <button class="toggle" onclick="document.body.classList.toggle('light')">Toggle theme</button>
+  <div class="frame">
+    <p class="label">Preview of github.com/dalindev README</p>
+
+    <h1>Dalin Huang</h1>
+    <h3>Senior Full Stack Developer / AI Developer</h3>
+
+    <p>Building AI agent platforms at <strong>Parker AI</strong>. Async pipelines that process billions of data points a day. Fine-tunes open-weight LLMs with LoRA. Eleven years shipping production systems — backend, frontend, and the weird stuff in between.</p>
+
+    <div class="center">
+      <object data="./media/term-stream.svg" type="image/svg+xml" width="800" height="180" aria-label="dalin@parker-ai — system.live"></object>
+    </div>
+
+    <div class="center">
+      <object data="./media/term-finetune.svg" type="image/svg+xml" width="800" height="240" aria-label="finetune.v17 — LoRA training monitor"></object>
+    </div>
+
+    <hr>
+
+    <p><strong>→ <a href="https://dalin.dev">dalin.dev</a></strong> · Three.js System Map · live terminals · built with Claude Opus 4.7</p>
+
+    <p>
+      <a href="https://linkedin.com/in/dalinhuang"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white"></a>
+      <a href="https://stackoverflow.com/users/4739018"><img alt="Stack Overflow" src="https://img.shields.io/badge/-Stackoverflow-FE7A16?logo=stack-overflow&logoColor=white"></a>
+      <a href="https://x.com/DalinHuang"><img alt="X" src="https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white"></a>
+    </p>
+  </div>
+</body>
+</html>

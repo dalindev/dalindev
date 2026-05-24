@@ -6,83 +6,94 @@
 
 ## Goal
 
-Update this profile README to reflect Dalin's current identity (Senior FS / AI Developer at Parker AI) and match the "Mission Control" terminal aesthetic of dalin.dev. Keep it short — this is a bio, not a portfolio.
+Mirror the dalin.dev hero section on the GitHub profile, plus the two animated console widgets — streaming `system.live` log and `finetune.v17` LoRA training monitor — re-implemented as standalone SMIL-animated SVGs.
 
-## Design principle: ruthless simplicity
+## Why SVG, not GIF
 
-A profile README serves a single visitor goal: "is this person interesting enough to click into their projects or dalin.dev?" Everything that doesn't serve that goal is noise. Final structure intentionally drops:
+GIFs of the dalin.dev demo are 1–5 MB, fixed loop, can't be updated cheaply. SVGs with SMIL `<animate>` tags are ~8 KB each, infinite loop, render natively in both GitHub dark + light themes, and survive being reloaded by browsers (no "first frame frozen" issue you sometimes get with GIFs in image proxies).
 
-- GitHub Stats cards (visual filler, not differentiating)
-- Top-languages chart (same)
-- Heat-coded warm/cool skill tiers (interesting on dalin.dev's heat map; on a bio they bury the primary stack)
-- Metric chip row (numbers already live in bullets above)
-- Easter-egg breadcrumb (defeats the purpose; charm belongs on dalin.dev itself)
-- Visit counter (decorative)
-- The big shield-badge tech wall from the previous README
+## Final Structure
 
-## Final Structure (4 sections, ~30 lines)
+Markdown content + two SVG files.
 
-### 1. Boot Sequence Header
+### 1. Hero (markdown)
 
-```
-$ dalin@parker-ai > booting mission-control...
-[✓] identity ........... Senior Full Stack / AI Developer
-[✓] location ........... Ottawa, Canada
-[✓] tenure ............. 11 years shipping production systems
-[✓] mission ............ → dalin.dev
+Mirrors the dalin.dev hero section text, but skips the topbar/buttons since the profile page has its own chrome.
+
+```markdown
+# Dalin Huang
+
+### Senior Full Stack Developer / AI Developer
+
+Building AI agent platforms at **Parker AI**. Async pipelines that process billions of data points a day. Fine-tunes open-weight LLMs with LoRA. Eleven years shipping production systems — backend, frontend, and the weird stuff in between.
 ```
 
-### 2. Active Agent — Parker AI
+### 2. `media/term-stream.svg` — streaming log
 
-`## 🛰️ Active Agent`
+- 800 × 180, Mac terminal chrome with traffic lights
+- Title: `dalin@parker-ai — system.live`
+- Right side: `● STREAMING` indicator (green dot, blinks at 1.8s)
+- 12 pre-rendered log lines covering 6 scroll frames at 1.5s each (9 s loop)
+- `<animateTransform>` with `calcMode="discrete"` translates the log group up by 18 px each tick
+- Clip rect (y=46, h=128) shows exactly 7 lines, no ascender/descender bleed
+- Color coding matches dalin.dev: `.ts` (dim timestamp), `.key` (light gray), `.acc` (amber), `.ok` (green), `.warn` (yellow). Default `.term` fill is `#c9d1d9` so untyped text remains visible.
 
-Sub-line: `` **`PARKER-AI`** · Senior FS / AI Developer · Dec 2023 → Present · `status: live` ``
-
-Four bullets (trimmed from six). Kept the strongest: differentiated work, headline metric, scale, and stack signal:
-- Architected AI agent platform for marketing/creative strategy
-- LoRA fine-tunes + auto-research loop — F1 **0.7% → 79%** across 30+ iterations
-- Pipelines: billions of data points/day · millions of ads · TBs of media
-- Async ad classification on Gemini Batch API + Supabase Postgres at scale
-
-### 3. Core Stack
-
-`## ⚡ Core Stack`
-
-Four lines inside a fenced code block. Only the primary stack — the things actually shipping today. Anyone curious about exploratory or older tech can see the heat-map on `dalin.dev`.
+Log content (rotating sample):
 
 ```
-AI         Agentic · Context Eng · Prompt Eng · Agent Tools · AI Workflows · Evals
-           LoRA · Gemini API · Claude API · OpenAI API · Embeddings
-Frontend   React · Next.js · TypeScript · TanStack Query
-Backend    Node.js · Python
-Data       PostgreSQL · Supabase · GCP
+[18:54:21] agent.classify   · 482 ads · 96.4% acc
+[18:54:22] supabase.read    ok · replica-2 · 14ms
+[18:54:23] agent.parker     · batch 482 · 12.4M embeddings
+[18:54:24] finetune.v17     LoRA · step 1240/2000
+[18:54:25] scraper.adset    ok · 87 sources synced
+[18:54:26] dashboard.ttq    · 38ms p50 · 124ms p95
+[18:54:27] [!] rate-limit   · backoff 2s · retry · ok
+[18:54:28] f1.score         = 0.794 ↑
+[18:54:29] gemini.batch     · 12 jobs queued
+[18:54:30] embeddings.write ok · 3.2K vectors
+[18:54:31] dashboard.kpi    · uptime 99.9% · p95 124ms
+[18:54:32] agent.classify   · 421 ads · 96.7% acc
 ```
 
-The AI row spans two lines on purpose. Top line = practices (what differentiates the work). Bottom line = the implementation stack (APIs and models — increasingly commoditized). Leading with practices signals depth, not just tool familiarity.
+### 3. `media/term-finetune.svg` — LoRA training monitor
 
-### 4. Open Mission Control (footer)
+- 800 × 240, Mac terminal chrome
+- Title: `finetune.v17 — qwen-3.6-27b · A100`
+- Right side: `● TRAINING` indicator (blinks 1.8s)
+- 3-state cycle for STEP counter via overlapping `<text>` opacity animations: `1258 → 1264 → 1271`
+- Matching 3-state cycle for percentage: `63% → 64% → 66%`
+- Progress bar `<rect>` width animates `126 → 135 → 126` continuously over 9 s
+- GPU bar fluctuates `73–78` over 6 s, CPU bar `34–42` over 4.5 s (gives "alive" feel without random jitter)
+- Static rows: loss / val / lr · VRAM · temp · RAM · recent 3 log lines
 
-`## 🌐 Open Mission Control`
+### 4. Footer (markdown)
 
-- One-line call-to-action: `**→ [dalin.dev](https://dalin.dev)** · Three.js System Map · live terminals · built with Claude Opus 4.7`
-- Socials line: LinkedIn / Stack Overflow / X badges (unchanged)
+```markdown
+---
 
-## Tone & voice
+**→ [dalin.dev](https://dalin.dev)** · Three.js System Map · live terminals · built with Claude Opus 4.7
 
-- Terminal / engineering tone — no marketing fluff.
-- Numbers and proper nouns over adjectives.
-- Lowercase tech names where the brand uses lowercase (e.g., `parker-ai` in the boot line).
-- No emojis inside the boot block (keeps it pure terminal).
-- Emojis only on section headings (🛰️ ⚡ 🌐).
+[LinkedIn badge] [Stack Overflow badge] [X badge]
+```
 
-## Data sources
+## Technical decisions
 
-- `dalin.dev/index.html` ROLES['parker-ai'] → Active Agent bullets
-- `Dalin_Huang_Resume_2026.pdf` page 1 → Ottawa location, F1 numbers `0.7% → 28% (v1) → 79% (v16)`
-- `dalin.dev` README → "built with Claude Opus 4.7" tag
+- **`<img>` vs `<object>`:** README references SVG via `<img>` (markdown-native). On GitHub's image proxy, SMIL animations work in modern browsers. Local preview uses `<object>` because the headless preview browser doesn't run SMIL inside `<img>` (real browsers do).
+- **No JS, no external fonts:** SVGs are self-contained and use the system monospace stack.
+- **`font-feature-settings: "liga" 0`** disables ligatures so `--`, `==`, `>=` etc. render as separate glyphs.
+- **`fill: #c9d1d9` on `.term`:** SVG default text fill is black, invisible on the dark terminal background. Setting the default on the parent class lets untyped tspans inherit a readable color.
+- **XML comment escape:** SVG comments can't contain `--`. The `// stack core` comment was rewritten to avoid the double-hyphen.
+
+## Local preview workflow
+
+1. `python3 -m http.server 9876 --bind 127.0.0.1 --directory /tmp/dalindev` (or the project root)
+2. Open `http://127.0.0.1:9876/preview.html`
+3. The preview page renders the README content with the SVGs embedded via `<object>` so animations play in headless browsers as well.
 
 ## Iteration history
 
-- **v1 (initial):** 5 sections including GitHub Stats and 6-category heat-coded skill matrix. Felt overstuffed on a bio.
-- **v2:** Dropped Stats, top-langs, heat tiers, metric chips, visit counter, and easter-egg breadcrumb. 4 sections, ~30 lines.
-- **v3 (this spec):** Split AI row into two — practices (Agentic, Context Eng, Prompt Eng, Agent Tools, AI Workflows, Evals) on top, APIs/models below. Practices are the differentiator on a bio; APIs are commodity.
+- **v1:** 5 sections including GitHub Stats and a 6-category heat-coded skill matrix.
+- **v2:** Dropped Stats, top-langs, heat tiers, metric chips, visit counter, easter-egg breadcrumb. 4 sections, ~30 lines.
+- **v3:** Split AI row into practices (Agentic, Context Eng, Prompt Eng, Agent Tools, AI Workflows, Evals) + implementation stack.
+- **v4:** Replaced text Active Agent + Core Stack with single animated terminal-banner SVG (`whoami / cat role.md / stack --core / open dalin.dev`).
+- **v5 (this spec):** Replaced the typewriter banner with the dalin.dev hero text + two animated console SVGs (streaming log + LoRA training monitor) to match how dalin.dev presents the work.
