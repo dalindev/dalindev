@@ -1,17 +1,61 @@
-# 💫 About Me:
-Hi there! 👋 I'm a passionate full-stack developer who loves Meme🐸/Ski⛷️/Fishing🎣/Tech👨‍💻
+```
+$ dalin@parker-ai > booting mission-control...
+[✓] identity ........... Senior Full Stack / AI Developer
+[✓] location ........... Canada · UTC-04:00
+[✓] tenure ............. 11 years shipping production systems
+[✓] mission ............ → dalin.dev
+```
 
-## 🌐 Socials:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/dalinhuang) [![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?logo=stack-overflow&logoColor=white)](https://stackoverflow.com/users/4739018) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/DalinHuang) 
+## 🛰️ Active Agent
 
-# 💻 Tech Stack:
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white) ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white) ![Datadog](https://img.shields.io/badge/datadog-%23632CA6.svg?style=for-the-badge&logo=datadog&logoColor=white) ![DigitalOcean](https://img.shields.io/badge/DigitalOcean-%230167ff.svg?style=for-the-badge&logo=digitalOcean&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![Chakra](https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white) ![Chart.js](https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white) ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![PNPM](https://img.shields.io/badge/pnpm-%234a4a4a.svg?style=for-the-badge&logo=pnpm&logoColor=f69220) ![Rails](https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white) ![React Query](https://img.shields.io/badge/-React%20Query-FF4154?style=for-the-badge&logo=react%20query&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Remix](https://img.shields.io/badge/remix-%23000.svg?style=for-the-badge&logo=remix&logoColor=white) ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) ![Three js](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white) ![Badge Name](https://img.shields.io/badge/tRPC-%232596BE.svg?style=for-the-badge&logo=tRPC&logoColor=white) ![Vue.js](https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white) ![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white) ![Adobe Creative Cloud](https://img.shields.io/badge/Adobe%20Creative%20Cloud-DA1F26.svg?style=for-the-badge&logo=Adobe%20Creative%20Cloud&logoColor=white) ![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+**`PARKER-AI`** · Senior FS / AI Developer · Dec 2023 → Present · `status: live`
 
-# 📊 GitHub Stats:
+- Architected AI agent platform for marketing/creative strategy
+- Pipelines: billions of data points/day · millions of ads · TBs of media
+- LoRA fine-tunes + auto-research loop — F1 **0.7% → 79%** over 30 iterations
+- Supabase Postgres at scale: partitioning, indexing, rollups, read-replicas
+- Shipped one of the best Meta ad dashboards on the market — fast, fully sortable, daily data up to 1 year
+- Async batch on Gemini Batch API — large-scale ad classification, media analysis, embeddings
+
+`DATA/DAY ~B` · `SCALE ~100×` · `ITER 30+` · `UPTIME 99.9%`
+
+## ⚡ System Capabilities
+
+> 🔥 hot · 🟡 warm · ⚪ cool
+
+```
+AI / LLM    🔥 LoRA  🔥 Gemini API  🔥 Claude API  🔥 OpenAI API  🔥 Embeddings  🔥 Eval loops
+            🟡 Claude Code  🟡 Cursor  🟡 ChatGPT  ⚪ Grok
+
+Frontend    🔥 React  🔥 Next.js  🔥 TanStack Q  🔥 TypeScript
+            🟡 Tailwind  🟡 Shadcn/UI  🟡 Chakra UI  🟡 HTML5/CSS3
+
+Backend     🔥 Node.js  🔥 Python
+            ⚪ Ruby  ⚪ PHP  ⚪ Java  ⚪ Perl
+
+Data        🔥 PostgreSQL  🔥 Supabase
+            🟡 Redis  🟡 Elasticsearch  ⚪ MySQL  ⚪ Firebase
+
+Cloud       🔥 Supabase  🔥 GCP
+            🟡 AWS  🟡 Azure  🟡 Vercel  ⚪ Netlify  ⚪ Firebase  ⚪ Tencent
+
+Frameworks  🔥 Next.js  🟡 Remix
+            ⚪ Rails  ⚪ Django  ⚪ Flask  ⚪ Vue  ⚪ Express  ⚪ Backbone  ⚪ CodeIgniter
+```
+
+## 📊 GitHub Stats
+
 ![](https://github-readme-stats-henna-six-66.vercel.app/api?username=dalindev&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
 ![](https://nirzak-streak-stats.vercel.app/?user=dalindev&theme=dark&hide_border=false)<br/>
 ![](https://github-readme-stats-henna-six-66.vercel.app/api/top-langs/?username=dalindev&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
+## 🌐 Open Mission Control
+
+**→ [dalin.dev](https://dalin.dev)**
+Three.js System Map · 8 AI agents · live terminals · built with Claude Opus 4.7
+_Try: `dalin.dev/?boot=1`_
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/dalinhuang) [![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?logo=stack-overflow&logoColor=white)](https://stackoverflow.com/users/4739018) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/DalinHuang)
 
 ---
 [![](https://visitcount.itsvg.in/api?id=dalindev&icon=0&color=0)](https://visitcount.itsvg.in)
