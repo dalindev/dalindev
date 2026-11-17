@@ -19,7 +19,7 @@ QA = [
     dict(q="AI", by="keywords",
          a="AI is my day job. At Parker AI I built a 10+ agent engineering loop, an automated research and training loop on a GPU "
            "cluster, and an eval framework that benchmarks 50+ models on production tools, MCP, and context. The fine-tuned LLMs I "
-           "trained match frontier-model quality at 200× lower cost and serve millions of requests a week. The goal is always the "
+           "trained match frontier-model quality at 200× lower cost and serve billions of requests a week. The goal is always the "
            "same: agents that do real engineering work, safely.",
          probs=[("is it real?", .51), ("ai", .27), ("vision", .10), ("workflow", .09)], pick=1,
          rel=["Parker AI", "Agent loops", "Self-hosted LLMs", "Evals"]),

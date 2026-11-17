@@ -41,8 +41,8 @@
       <text x="24" y="78"><tspan fill="#4b5563">[18:54:22]</tspan> <tspan fill="#79c0ff">eng.bot</tspan> <tspan fill="#fbbf24">DRAFT</tspan> · draft PR · +142 −38 · 6 files</text>
       <text x="24" y="96"><tspan fill="#4b5563">[18:54:23]</tspan> <tspan fill="#79c0ff">qa.bot</tspan> <tspan fill="#4ade80">ok</tspan> · verified on replica + preview</text>
       <text x="24" y="114"><tspan fill="#4b5563">[18:54:24]</tspan> <tspan fill="#79c0ff">security.agent</tspan> · 2 findings → address or explain</text>
-      <text x="24" y="132"><tspan fill="#4b5563">[18:54:25]</tspan> <tspan fill="#79c0ff">eng.manager</tspan> <tspan fill="#4ade80">ok</tspan> · deploy watched · smoke ✓ · verified</text>
-      <text x="24" y="150"><tspan fill="#4b5563">[18:54:26]</tspan> <tspan fill="#f59e0b">[gate] prod migration · waiting on a human</tspan></text>
+      <text x="24" y="132"><tspan fill="#4b5563">[18:54:25]</tspan> <tspan fill="#79c0ff">eng.manager</tspan> <tspan fill="#4ade80">ok</tspan> · prod deploy auto-shipped · smoke ✓</text>
+      <text x="24" y="150"><tspan fill="#4b5563">[18:54:26]</tspan> <tspan fill="#f59e0b">[gate] long-tail change · waiting on a human</tspan></text>
       <text x="24" y="168"><tspan fill="#4b5563">[18:54:27]</tspan> <tspan fill="#79c0ff">status.island</tspan> <tspan fill="#4ade80">ok</tspan> · 30/30 systems healthy</text>
       <text x="24" y="186"><tspan fill="#4b5563">[18:54:28]</tspan> <tspan fill="#79c0ff">claude.code</tspan> <tspan fill="#fbbf24">LOCAL</tspan> · verify-first brief → draft PR</text>
       <text x="24" y="204"><tspan fill="#4b5563">[18:54:29]</tspan> <tspan fill="#79c0ff">cost.scout</tspan> · spend traced to one call site</text>
