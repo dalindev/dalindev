@@ -11,7 +11,7 @@ from xml.sax.saxutils import escape as E
 
 OUT = sys.argv[1]
 FONT = "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace"
-W, H = 800, 492
+W, H = 800, 510
 P = 15.0                      # seconds per question
 ANS_FS, ANS_CW, ANS_LH, WRAP = 12, 7.224, 18, 64   # answer text: font size, char width, line height, chars per line
 TOK = 0.07                    # seconds per token
@@ -24,6 +24,26 @@ QA = [
            "same: agents that do real engineering work, safely.",
          probs=[("is it real?", .51), ("ai", .27), ("vision", .10), ("workflow", .09)], pick=1,
          rel=["Parker AI", "Agent loops", "Self-hosted LLMs", "Evals"]),
+    dict(q="agents", by="keywords",
+         a="I built a 10+ agent loop covering intake, coding, QA, security, incident response, and release. It runs on top "
+           "of Status Island, which tracks live health across 30+ systems. Agents ship to production, write data, and run "
+           "migrations. Each kind of change starts behind a human yes and goes automatic as it earns trust, so the "
+           "automated share climbs from 10% toward 99%. The last 1% still needs a person. Clean-context QA and Security "
+           "agents verify every diff against real replicas, previews, and logs before anything merges. The team itself is "
+           "a Chief of Staff bot directing about ten specialist Grok bots (ask me about Grok bots). You can watch a "
+           "version of it in the office below.",
+         probs=[('agents', 0.99), ('safety', 0.01), ('agent team', 0), ('support', 0)], pick=0,
+         rel=["Agent loops", "Grok bots", "Human-in-the-loop", "Verifier agents"]),
+    dict(q="fine-tuning", by="similar question",
+         a="I trained our self-hosted fine-tuned LLMs. They match frontier-model quality at 200× lower cost and serve "
+           "billions of requests a week. Inference runs async on GPU clusters through a job queue with producers and "
+           "finalizers, which saves even more. The research and training loop behind them is automated too: agents run the "
+           "experiments, monitor the runs, and iterate. On top of that, a continuous learning pipeline turns user "
+           "reactions and feedback into a training queue for models and LLM judges. It also distills domain experts' "
+           "outputs, chats, and review history into vision+text → text reasoning models. The 👍 button below is a tiny "
+           "version of that.",
+         probs=[('fine-tuning', 1), ('aijobs', 0), ('inspiration', 0), ('shopify', 0)], pick=0,
+         rel=["Fine-tuning", "Self-hosted LLMs", "Learning loop", "Distillation"]),
     dict(q="where is AI going?", by="keywords",
          a="I'm an optimist: I believe AI will build a better future, and I expect AGI around 2027. You can already see the path in "
            "my own work. Agents that used to autocomplete code now take a ticket, write the fix, test it, and verify the deploy, "
@@ -106,7 +126,7 @@ for i, qa in enumerate(QA):
 # ── TRY chips ──
 s.append('    <text x="24" y="108" font-size="9" fill="#6e7681" letter-spacing="1">TRY</text>')
 x = 52
-for label in ["AI", "agents", "Grok bots", "Agent Island", "Ship Loops", "fine-tuning", "Shopify", "hire", "where is AI going?"]:
+for label in ["agents", "fine-tuning", "where is AI going?", "is this a real LLM?"]:   # the site's chips, minus "why hire you?"; "AI" is the page's own opening demo
     w, svg = chip(x, 94, label, color="#8b949e")
     hot = [i for i, qa in enumerate(QA) if qa["q"] == label]
     s.append('    ' + svg)
