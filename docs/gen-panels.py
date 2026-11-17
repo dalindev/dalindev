@@ -2,7 +2,8 @@
 """Generates media/ask.svg: a replay of the "Ask the model" panel on dalin.dev.
 
 Plain SVG + SMIL only (no scripts, no CSS, explicit fills), because GitHub shows README images with scripts off.
-The questions, answers, "picked by" source and softmax numbers are what the real page produces for these questions.
+The questions, answers and "picked by" source are what the real page produces for these questions. The softmax numbers and
+hidden activations are from one real page load; the network starts from random weights, so they differ a little on every visit.
 Usage: python3 docs/gen-panels.py media
 """
 import sys, textwrap, json, random, os
@@ -32,10 +33,11 @@ QA = [
          probs=[("vision", .99), ("fit", .01), ("hello", .00), ("ai", .00)], pick=0,
          rel=["Agent loops", "Human-in-the-loop", "Evals", "Verifier agents"]),
     dict(q="is this a real LLM?", by="similar question",
-         a="Partly, and I'd rather be upfront about it. The network in the picture is real: a small neural network trained in your "
+         a="Partly, and I'd rather be upfront about it. The network in the picture is real: a tiny classifier trained in your "
            "browser when the page loaded, and the thumbs-up runs a real gradient step on it. The rest is a show of how an LLM "
-           "works: there's no API call and no large language model, and nothing you type leaves your browser. Dalin wrote the "
-           "answers from the resume, so I can't hallucinate. The real models are Dalin's day job: self-hosted fine-tuned LLMs "
+           "works: there's no API call and no large language model, and nothing you type leaves your browser. The answers were "
+           "written ahead of time from Dalin's resume and notes, so I can't invent facts, though I can still pick the wrong "
+           "answer. The real models are Dalin's day job: self-hosted fine-tuned LLMs "
            "that match frontier-model quality at 200× lower cost.",
          probs=[("is it real?", .97), ("ai", .02), ("hello", .00), ("agents", .00)], pick=0,
          rel=["Self-hosted LLMs", "Fine-tuning"]),
@@ -87,7 +89,7 @@ s.append(f'''  <rect width="{W}" height="{H}" rx="10" fill="#0d1117" stroke="#30
   <path d="M 0,10 A 10,10 0 0 1 10,0 L {W - 10},0 A 10,10 0 0 1 {W},10 L {W},36 L 0,36 Z" fill="#161b22"/>
   <line x1="0" y1="36" x2="{W}" y2="36" stroke="#30363d"/>
   <circle cx="22" cy="18" r="6" fill="#ff5f57"/><circle cx="42" cy="18" r="6" fill="#febc2e"/><circle cx="62" cy="18" r="6" fill="#28c840"/>
-  <text x="{W / 2}" y="22" text-anchor="middle" font-family="{FONT}" font-size="11" fill="#6e7681" letter-spacing="1">dalin-lm · real router network · simulated decoder</text>
+  <text x="{W / 2}" y="22" text-anchor="middle" font-family="{FONT}" font-size="11" fill="#6e7681" letter-spacing="1">dalin-lm · tiny classifier · trains in your browser in ~70 ms</text>
   <g transform="translate(722, 22)" font-family="{FONT}" font-size="11" letter-spacing="1">
     <circle cx="-12" cy="-4" r="4" fill="#4ade80"><animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/></circle>
     <text x="0" y="0" fill="#4ade80">REPLAY</text>
@@ -128,9 +130,9 @@ BY = SY + 24                                   # body top
 DIV, FOOT = 514, H - 44
 s.append(f'    <line x1="{DIV}" y1="{BY}" x2="{DIV}" y2="{FOOT}" stroke="#21262d"/>')
 s.append(f'    <text x="24" y="{BY + 18}" font-size="9" fill="#6e7681" letter-spacing="1">ANSWER · streamed token by token</text>')
-s.append(f'    <text x="{DIV + 14}" y="{BY + 18}" font-size="9" fill="#6e7681" letter-spacing="1">ROUTER NETWORK · real · 68,460 params</text>')
+s.append(f'    <text x="{DIV + 14}" y="{BY + 18}" font-size="9" fill="#6e7681" letter-spacing="1">CLASSIFIER · real · 68,460 params</text>')
 
-# router network: input words → all 64 hidden units (4 sub-columns of 16) → top answers
+# the classifier: input words → all 64 hidden units (4 sub-columns of 16) → top answers
 NY = BY + 30
 IN = (DIV + 22, NY + 62)
 HID = [(DIV + 74 + (k // 16) * 13, NY + 1 + (k % 16) * 8.3) for k in range(64)]
@@ -161,7 +163,7 @@ for y in OUTS:
     s.append(f'    <circle cx="{OUTX}" cy="{y}" r="3.2" fill="#161b22" stroke="#6e7681"/>')
 AX = NY + 138
 s.append(f'    <text x="{IN[0]}" y="{AX}" text-anchor="middle" font-size="8.5" fill="#6e7681">words</text>')
-s.append(f'    <text x="{DIV + 94}" y="{AX}" text-anchor="middle" font-size="8.5" fill="#6e7681">64 hidden · relu</text>')
+s.append(f'    <text x="{DIV + 94}" y="{AX}" text-anchor="middle" font-size="8.5" fill="#6e7681">1 layer · 64 units</text>')
 s.append(f'    <text x="{OUTX + 44}" y="{AX}" text-anchor="middle" font-size="8.5" fill="#6e7681">softmax · top 4 of 44</text>')
 
 # next-token panel (the simulated decoder)
@@ -252,7 +254,7 @@ for i, qa in enumerate(QA):
     g.append('</g>')
     s.append(''.join(g))
     secs = len(words) * TOK
-    s.append(f'      <text x="24" y="{FOOT - 12}" font-size="9.5" fill="#6e7681" opacity="0">{len(qa["q"].split())} in · {len(words)} out · {secs:.1f}s · picked by <tspan fill="#c9d1d9" font-weight="700">{E(qa["by"])}</tspan> · answers are hand-written, not generated{on(t_done + 0.2, t1)}</text>')
+    s.append(f'      <text x="24" y="{FOOT - 12}" font-size="9.5" fill="#6e7681" opacity="0">{len(qa["q"].split())} in · {len(words)} out · {secs:.1f}s · picked by <tspan fill="#c9d1d9" font-weight="700">{E(qa["by"])}</tspan> · answers are pre-written, not generated{on(t_done + 0.2, t1)}</text>')
     s.append('    </g>')
 
 # ── footer ──

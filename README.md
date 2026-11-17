@@ -1,13 +1,14 @@
 # Dalin Huang
 
-### Senior AI Developer, Agent Systems
+### Senior AI Developer
 
-I build the AI behind **Parker AI**. And the agents that build it.
+I build AI that builds. And the trust that lets it ship.<br>
+Currently at **Parker AI**, taking marketing fully agentic.
 
-Parker AI is taking marketing fully agentic: data, research, production, and shipping, in loops that close themselves and improve with every run. My side of it: agent loops, self-hosted fine-tuned LLMs, evals across 50+ models, and data pipelines at billions of points a day. 10+ years shipping production systems.
+What I build there: agent loops that take a ticket to production, self-hosted fine-tuned LLMs, evals across 50+ models, and data pipelines at billions of points a day. Agents earn their autonomy: a kind of change ships by itself once it has a track record, and the long tail still stops at a person. 10+ years shipping production systems.
 
 <p align="center">
-  <a href="https://dalin.dev/#ask"><img src="./media/ask.svg" alt="Ask the model: a replay of the question box on dalin.dev. On the site the network trains in your browser and you can type your own question." width="100%"></a>
+  <a href="https://dalin.dev/#ask"><img src="./media/ask.svg" alt="Ask the model: a replay of the question box on dalin.dev. On the site a tiny classifier trains in your browser and you can type your own question." width="100%"></a>
 </p>
 
 <p align="center">
@@ -22,6 +23,6 @@ Parker AI is taking marketing fully agentic: data, research, production, and shi
 
 ---
 
-**→ [dalin.dev](https://dalin.dev)** · ask the model · explore the career clock · built with Claude Code (Fable 5.2)
+**→ [dalin.dev](https://dalin.dev)** · ask a tiny classifier that trains in your browser · explore the career clock · built with Claude Code (Fable 5.2)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/dalinhuang) [![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?logo=stack-overflow&logoColor=white)](https://stackoverflow.com/users/4739018) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/DalinHuang)
